@@ -1,0 +1,229 @@
+/*
+------------------------------
+        LOADING FONTS        |
+------------------------------ 
+*/
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+/*
+------------------------------
+        HTML BASICS          |
+------------------------------ 
+*/
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    max-width: 100%;
+    background-size: cover;
+    color: white;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+}
+
+.container:nth-child(odd){
+    background-image: linear-gradient(to top, #F7ECE4 0%, #E6EAF5 100%);
+}
+
+.container:nth-child(even){
+    background-color: #282931;
+}
+
+ul{list-style-type: none;}
+li a{text-decoration: none; color: white;}
+a:hover{transition: 0.7s all ease; color: #fed136;}
+h3{font-size: 2.3rem;}
+p::selection, h3::selection, a::selection, b::selection, img::selection{color: #fed136;}
+#title-home button:focus{outline:0;}
+
+
+/*
+------------------
+       NAVBAR    |
+------------------ 
+*/
+
+#navbar-wrapper{
+    position: fixed;
+    text-align: right;
+    height: 70px;
+    width: 100%;
+    z-index: 1;
+}
+
+#navbar li{
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 1.1rem;
+}
+
+#navbar{
+    margin: 35px 20px 0px 20px;
+}
+
+/*
+-----------------------------
+ Title & button - Home page  |
+----------------------------- 
+*/
+
+#title-home{
+    width: 50%;
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#title-home button{
+    margin-top: 40px;
+    padding: 18px 40px;
+    background: #fed136;
+    border: 1px solid black;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+#title-home button:hover{
+    transition: 1s all ease;
+    background: #777;
+    border: 1px solid #fed136;
+    color: white;
+}
+
+/*
+----------------------------------
+    Subscription & Service page   |
+----------------------------------
+*/
+
+#title{
+    width: 50%;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    color: #222;
+}
+
+#services div#title{
+    color: white;
+} 
+
+#title p{
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+#pass-subscription{width: 100%;}
+#list-services{width: 60%;}
+
+.div-choices{
+    text-align: center;
+    position: relative;
+    top: 35%;
+    color: #222;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    margin: auto;
+}
+
+.div-choices ul{
+    display: inline-table;
+    padding: 20px;
+    font-size: 1.1rem;
+}
+
+#pass-subscription ul{width: 20%;}
+#list-services ul{width: 48%;}
+
+.div-choices ul li img{
+    height: auto;
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 120px;
+}
+
+/* .div-choices ul ul li{width: 200px;} */
+
+#list-services ul:first-child li img{width: 80px;}
+
+.div-choices ul li:nth-child(2), .div-choices ul li:nth-child(2) + li{
+    margin-top: 15px;
+}
+
+#list-services ul li:nth-child(2), #list-services ul li:nth-child(2) + li{
+    color: white;
+}
+
+#services{
+    position: absolute;
+}
+
+#info{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+/*
+------------------------------
+    Mobile first queries     |
+------------------------------ 
+*/
+
+@media (min-width: 200px) and (max-width: 600px) {
+    #navbar li:first-child, #navbar li:first-child + li{display: none;}
+    h3{font-size: 1.6rem;}
+    #title-home button{padding: 18px 30px;}
+    .div-choices ul{font-size: 0.8rem;}
+    .div-choices ul li img{width: 60px;}
+    #list-services ul:first-child li img{width: 40px;}
+    #list-services{width: 100%; margin-top: 20%;}
+    .div-choices{top: 25%;}
+    .div-choices ul li p{font-size: 0.6rem;}
+    #pass-subscription {width: 90%;}
+    #pass-subscription ul {width: 45%;}
+    #info{font-size: 0.8rem;}
+    /* .div-choices ul ul li {width: 100px;} */
+}
+
+@media (min-width: 200px) and (max-width: 1023px) {
+    #navbar li{margin: 0 15px; font-size: 1rem;}
+}
+
+@media (min-width: 200px) and (max-width: 750px) {
+    #navbar li{margin: 0 5px; font-size: 1rem;}
+}
+
+@media (min-width: 1024px){
+    .div-choices ul ul li {width: 200px;}
+}
