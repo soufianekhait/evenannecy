@@ -49,8 +49,8 @@ class __TwigTemplate_2bb7c9b44ca31e679463768c95b6c86f487f1b6ade39adcbd70948de999
         <ul id=\"navbar\">
             <li class=\"navbarLink\"><a href=\"#subscription\">Abonnement</a></li>
             <li class=\"navbarLink\"><a href=\"#services\">Services</a></li>
-            <li class=\"navbarLink\"><a href=\"views/signup\">S'inscrire</a></li>
-            <li class=\"navbarLink\"><a href=\"views/signin\">Se connecter</a></li>
+            <li class=\"navbarLink\"><a href=\"/signup\">S'inscrire</a></li>
+            <li class=\"navbarLink\"><a href=\"/login\">Se connecter</a></li>
         </ul>
     </header>
 ";
@@ -80,8 +80,8 @@ class __TwigTemplate_2bb7c9b44ca31e679463768c95b6c86f487f1b6ade39adcbd70948de999
         <ul id=\"navbar\">
             <li class=\"navbarLink\"><a href=\"#subscription\">Abonnement</a></li>
             <li class=\"navbarLink\"><a href=\"#services\">Services</a></li>
-            <li class=\"navbarLink\"><a href=\"views/signup\">S'inscrire</a></li>
-            <li class=\"navbarLink\"><a href=\"views/signin\">Se connecter</a></li>
+            <li class=\"navbarLink\"><a href=\"/signup\">S'inscrire</a></li>
+            <li class=\"navbarLink\"><a href=\"/login\">Se connecter</a></li>
         </ul>
     </header>
 {% endblock %}", "includes/header.html.twig", "C:\\wamp64\\www\\evenannecy\\templates\\includes\\header.html.twig");

@@ -49,7 +49,7 @@ class __TwigTemplate_74b07e8e906f6f33f94b9730977d52b6425e6925057381f4be7374a39d0
     ";
         // line 14
         $this->displayBlock('body', $context, $blocks);
-        // line 47
+        // line 39
         echo "</body>
 </html>";
         
@@ -124,19 +124,23 @@ class __TwigTemplate_74b07e8e906f6f33f94b9730977d52b6425e6925057381f4be7374a39d0
         </div>
         <div id=\"signup-wrapper\" class=\"connexion-wrapper\">
             <div class=\"connexion-column\" id=\"sigin-column\">
-                <form action=\"/\" method=\"POST\" id=\"connexion-form\">
-                    <label for=\"username\">Adresse mail</label>
-                    <input type=\"text\">
-                    <label for=\"password\">Mot de passe</label>
-                    <input type=\"password\">
-                    <label for=\"password\">Confirmer le mot de passe</label>
-                    <input type=\"password\">
-                    <label for=\"username\">Numéro de téléphone</label>
-                    <input type=\"text\">
-                    <label for=\"username\">Adresse postale</label>
-                    <input type=\"text\">
+                ";
+        // line 23
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new Twig_Error_Runtime('Variable "registrationForm" does not exist.', 23, $this->source); })()), 'form_start');
+        echo "
+                    ";
+        // line 24
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new Twig_Error_Runtime('Variable "registrationForm" does not exist.', 24, $this->source); })()), "email", []), 'row');
+        echo "
+                    ";
+        // line 25
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new Twig_Error_Runtime('Variable "registrationForm" does not exist.', 25, $this->source); })()), "plainPassword", []), 'row');
+        echo "
                     <input type=\"submit\" value=\"S'inscrire\">
-                </form>
+                ";
+        // line 27
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new Twig_Error_Runtime('Variable "registrationForm" does not exist.', 27, $this->source); })()), 'form_end');
+        echo "
             </div>
             <div id=\"divider-vertical\"></div>
             <div class=\"connexion-column\" id=\"signup-column\">
@@ -145,9 +149,9 @@ class __TwigTemplate_74b07e8e906f6f33f94b9730977d52b6425e6925057381f4be7374a39d0
         </div>
     </article>
         ";
-        // line 43
+        // line 35
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 46
+        // line 38
         echo "    ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -157,7 +161,7 @@ class __TwigTemplate_74b07e8e906f6f33f94b9730977d52b6425e6925057381f4be7374a39d0
 
     }
 
-    // line 43
+    // line 35
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -166,7 +170,7 @@ class __TwigTemplate_74b07e8e906f6f33f94b9730977d52b6425e6925057381f4be7374a39d0
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 44
+        // line 36
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/scripts/script.js"), "html", null, true);
         echo "\"></script>
@@ -186,7 +190,7 @@ class __TwigTemplate_74b07e8e906f6f33f94b9730977d52b6425e6925057381f4be7374a39d0
 
     public function getDebugInfo()
     {
-        return array (  170 => 44,  161 => 43,  151 => 46,  149 => 43,  117 => 15,  108 => 14,  96 => 10,  91 => 9,  82 => 8,  64 => 7,  53 => 47,  51 => 14,  47 => 12,  45 => 8,  41 => 7,  33 => 1,);
+        return array (  174 => 36,  165 => 35,  155 => 38,  153 => 35,  142 => 27,  137 => 25,  133 => 24,  129 => 23,  117 => 15,  108 => 14,  96 => 10,  91 => 9,  82 => 8,  64 => 7,  53 => 39,  51 => 14,  47 => 12,  45 => 8,  41 => 7,  33 => 1,);
     }
 
     public function getSourceContext()
@@ -213,19 +217,11 @@ class __TwigTemplate_74b07e8e906f6f33f94b9730977d52b6425e6925057381f4be7374a39d0
         </div>
         <div id=\"signup-wrapper\" class=\"connexion-wrapper\">
             <div class=\"connexion-column\" id=\"sigin-column\">
-                <form action=\"/\" method=\"POST\" id=\"connexion-form\">
-                    <label for=\"username\">Adresse mail</label>
-                    <input type=\"text\">
-                    <label for=\"password\">Mot de passe</label>
-                    <input type=\"password\">
-                    <label for=\"password\">Confirmer le mot de passe</label>
-                    <input type=\"password\">
-                    <label for=\"username\">Numéro de téléphone</label>
-                    <input type=\"text\">
-                    <label for=\"username\">Adresse postale</label>
-                    <input type=\"text\">
+                {{ form_start(registrationForm) }}
+                    {{ form_row(registrationForm.email) }}
+                    {{ form_row(registrationForm.plainPassword) }}
                     <input type=\"submit\" value=\"S'inscrire\">
-                </form>
+                {{ form_end(registrationForm) }}
             </div>
             <div id=\"divider-vertical\"></div>
             <div class=\"connexion-column\" id=\"signup-column\">
