@@ -2293,9 +2293,33 @@
         ]
     },
     {
+        "name": "symfony/apache-pack",
+        "version": "v1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/apache-pack.git",
+            "reference": "3aa5818d73ad2551281fc58a75afd9ca82622e6c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/apache-pack/zipball/3aa5818d73ad2551281fc58a75afd9ca82622e6c",
+            "reference": "3aa5818d73ad2551281fc58a75afd9ca82622e6c",
+            "shasum": ""
+        },
+        "time": "2017-12-12T01:46:35+00:00",
+        "type": "symfony-pack",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "A pack for Apache support in Symfony"
+    },
+    {
         "name": "symfony/asset",
-        "version": "v4.2.3",
-        "version_normalized": "4.2.3.0",
+        "version": "v4.2.4",
+        "version_normalized": "4.2.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/asset.git",
@@ -3466,17 +3490,17 @@
     },
     {
         "name": "symfony/form",
-        "version": "v4.2.3",
-        "version_normalized": "4.2.3.0",
+        "version": "v4.2.4",
+        "version_normalized": "4.2.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/form.git",
-            "reference": "48fcd7482d3a946f2ca6f778003ec042534b5d7d"
+            "reference": "d44ad1ac671fb79fe5b3093b61779476da8b63f9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/form/zipball/48fcd7482d3a946f2ca6f778003ec042534b5d7d",
-            "reference": "48fcd7482d3a946f2ca6f778003ec042534b5d7d",
+            "url": "https://api.github.com/repos/symfony/form/zipball/d44ad1ac671fb79fe5b3093b61779476da8b63f9",
+            "reference": "d44ad1ac671fb79fe5b3093b61779476da8b63f9",
             "shasum": ""
         },
         "require": {
@@ -3515,7 +3539,7 @@
             "symfony/twig-bridge": "For templating with Twig.",
             "symfony/validator": "For form validation."
         },
-        "time": "2019-01-30T17:51:38+00:00",
+        "time": "2019-02-23T15:42:05+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -4868,17 +4892,17 @@
     },
     {
         "name": "symfony/security-bundle",
-        "version": "v4.2.3",
-        "version_normalized": "4.2.3.0",
+        "version": "v4.2.4",
+        "version_normalized": "4.2.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/security-bundle.git",
-            "reference": "0e1c9003830c5da614e58bd74b2fd0bb7c4569d6"
+            "reference": "d382808b206f01235053d6d1981beef325a7345b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/security-bundle/zipball/0e1c9003830c5da614e58bd74b2fd0bb7c4569d6",
-            "reference": "0e1c9003830c5da614e58bd74b2fd0bb7c4569d6",
+            "url": "https://api.github.com/repos/symfony/security-bundle/zipball/d382808b206f01235053d6d1981beef325a7345b",
+            "reference": "d382808b206f01235053d6d1981beef325a7345b",
             "shasum": ""
         },
         "require": {
@@ -4921,7 +4945,7 @@
             "symfony/yaml": "~3.4|~4.0",
             "twig/twig": "~1.34|~2.4"
         },
-        "time": "2019-01-16T20:35:37+00:00",
+        "time": "2019-03-03T18:11:24+00:00",
         "type": "symfony-bundle",
         "extra": {
             "branch-alias": {
@@ -5718,17 +5742,17 @@
     },
     {
         "name": "symfony/validator",
-        "version": "v4.2.3",
-        "version_normalized": "4.2.3.0",
+        "version": "v4.2.4",
+        "version_normalized": "4.2.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/validator.git",
-            "reference": "f051f6bdc89b414a899c4652570352a4cdf5a868"
+            "reference": "ba50866242d992f0dd818e2c34c5088f163c974d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/validator/zipball/f051f6bdc89b414a899c4652570352a4cdf5a868",
-            "reference": "f051f6bdc89b414a899c4652570352a4cdf5a868",
+            "url": "https://api.github.com/repos/symfony/validator/zipball/ba50866242d992f0dd818e2c34c5088f163c974d",
+            "reference": "ba50866242d992f0dd818e2c34c5088f163c974d",
             "shasum": ""
         },
         "require": {
@@ -5774,7 +5798,7 @@
             "symfony/translation": "For translating validation errors.",
             "symfony/yaml": ""
         },
-        "time": "2019-01-30T11:44:30+00:00",
+        "time": "2019-03-03T18:11:24+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
