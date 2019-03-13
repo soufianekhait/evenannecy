@@ -13,14 +13,14 @@
 <body>
     {% block body %}
     {{ include('includes/header.html.twig') }}
-    <article id="connexion" class="container">
+    <article id="connexion" class="container-sign">
         <div id="title">
             <h3>Connectez-vous</h3>
             <p>Heureux de vous revoir parmi nous !</p>
         </div>
         <div id="signin-wrapper" class="connexion-wrapper">
             <div class="connexion-column" id="sigin-column">
-                <form action="/logged" method="POST" id="connexion-form">
+                <form action="/logged" method="POST" id="registration_form">
                     <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
                     {% if error %}
                         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -29,17 +29,19 @@
                     <input type="email" value="{{ last_username }}" name="email" id="inputEmail" required autofocus>
                     <label for="password">Mot de passe</label>
                     <input type="password" name="password" id="inputPassword" required autofocus>
-                    <input type="submit" value="Se connecter">
+                    <div>
+                        <button type="submit" id="registration_form_Submit" name="registration_form[Submit]" class="save">Se connecter</button>
+                    </div>
                 </form>
             </div>
             <div id="divider-vertical"></div>
             <div class="connexion-column" id="signup-column">
-                <p>Pas encore inscrit ? <b><a href="/signup">Inscrivez-vous</a></b> vite !</p>
+                <p>Pas encore inscrit ? <b><a href="/register">Inscrivez-vous</a></b> vite !</p>
             </div>
         </div>
     </article>
         {% block javascripts %}
-            <script src="{{asset('assets/scripts/script.js')}}"></script>
+            <script src="{{asset('assets/scripts/sign.js')}}"></script>
         {% endblock %}
     {% endblock %}
 </body>
