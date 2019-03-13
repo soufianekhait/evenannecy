@@ -1,4 +1,4 @@
-#connexion-form input:focus{outline-color: #fed135;}
+#registration_form input:focus{outline-color: #fed135;}
 
 .connexion-wrapper{
     position: relative;
@@ -13,11 +13,7 @@
     border-radius: 5px;
 }
 
-#connexion{
-    background-color: #ddd;
-}
-
-#connexion-form input[type=submit]{
+#registration_form div button[type=submit]{
     width: 45%;
     height: 100%;
     background: #fed135;
@@ -29,27 +25,35 @@
     margin-top: 10px;
 }
 
-#connexion-form input[type=submit]:hover{
+#registration_form div button[type=submit]:hover{
     transition: 0.7s all ease;
     background: #40cb90;
     color: white;
 }
 
-#connexion-form{
+#registration_form{
     color: black;
     display: grid;
     width: 80%;
     margin-left: 10%;
 }
 
-#connexion-form input{
+#registration_form input, #registration_form div button{
     padding: 10px 0;
     font-size: 1.02rem;
+    height: 43px;
     font-family: 'Montserrat', sans-serif;
 }
 
-#connexion-form label{margin-bottom: 5px;}
-#connexion-form input{margin-bottom: 20px;}
+#registration_form label{margin-bottom: 5px;}
+
+#registration_form input{
+    margin-bottom: 20px;
+    border: none;
+    border-left: 3px solid #fed135;
+    padding-left: 8px;
+    outline: none;
+}
 
 .connexion-column{
     display: inline-flex;
@@ -75,5 +79,6 @@
 }
 
 #signup-wrapper{
-    height: 80%;
+    height: 500px;
+    margin-bottom: 100px;
 }
