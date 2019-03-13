@@ -13,27 +13,24 @@
 <body>
     {% block body %}
     {{ include('includes/header.html.twig') }}
-    <article id="connexion" class="container">
+    <article id="connexion" class="container-sign">
         <div id="title">
             <h3>Inscrivez-vous</h3>
             <p>Faites partie de notre communauté !</p>
         </div>
         <div id="signup-wrapper" class="connexion-wrapper">
             <div class="connexion-column" id="sigin-column">
-                {{ form_start(registrationForm) }}
-                    {{ form_row(registrationForm.email) }}
-                    {{ form_row(registrationForm.plainPassword) }}
-                    <input type="submit" value="S'inscrire">
+                {{ form_start(registrationForm, {'attr': {'id': 'registration_form'}}) }}
                 {{ form_end(registrationForm) }}
             </div>
             <div id="divider-vertical"></div>
             <div class="connexion-column" id="signup-column">
-                <p>Vous avez déjà un compte ? <b><a href="/signup">Connectez-vous</a></b> !</p>
+                <p>Vous avez déjà un compte ? <b><a href="/login">Connectez-vous</a></b> !</p>
             </div>
         </div>
     </article>
         {% block javascripts %}
-            <script src="{{asset('assets/scripts/script.js')}}"></script>
+            <script src="{{asset('assets/scripts/sign.js')}}"></script>
         {% endblock %}
     {% endblock %}
 </body>
