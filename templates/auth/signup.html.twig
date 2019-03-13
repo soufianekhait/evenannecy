@@ -20,19 +20,11 @@
         </div>
         <div id="signup-wrapper" class="connexion-wrapper">
             <div class="connexion-column" id="sigin-column">
-                <form action="/" method="POST" id="connexion-form">
-                    <label for="username">Adresse mail</label>
-                    <input type="text">
-                    <label for="password">Mot de passe</label>
-                    <input type="password">
-                    <label for="password">Confirmer le mot de passe</label>
-                    <input type="password">
-                    <label for="username">Numéro de téléphone</label>
-                    <input type="text">
-                    <label for="username">Adresse postale</label>
-                    <input type="text">
+                {{ form_start(registrationForm) }}
+                    {{ form_row(registrationForm.email) }}
+                    {{ form_row(registrationForm.plainPassword) }}
                     <input type="submit" value="S'inscrire">
-                </form>
+                {{ form_end(registrationForm) }}
             </div>
             <div id="divider-vertical"></div>
             <div class="connexion-column" id="signup-column">
