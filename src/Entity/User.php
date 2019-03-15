@@ -8,14 +8,15 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @ORM\Table(name="`user`")
  * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
  */
 class User implements UserInterface
 {
     /**
      * @ORM\Id()
+     * @ORM\Column(type="integer", unique=true, nullable=false)
      * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
      */
     private $id;
 
@@ -39,6 +40,36 @@ class User implements UserInterface
      * @ORM\ManyToOne(targetEntity="App\Entity\Subscription", inversedBy="userSubscribed")
      */
     private $subscription;
+
+    /**
+     * @ORM\Column(type="string", length=80)
+     */
+    private $firstname;
+
+    /**
+     * @ORM\Column(type="string", length=80)
+     */
+    private $lastname;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $street;
+
+    /**
+     * @ORM\Column(type="string", length=5)
+     */
+    private $zipCode;
+
+    /**
+     * @ORM\Column(type="string", length=80)
+     */
+    private $city;
+
+    /**
+     * @ORM\Column(type="string", length=80)
+     */
+    private $country;
 
     public function getId(): ?int
     {
@@ -126,6 +157,78 @@ class User implements UserInterface
     public function setSubscription(?Subscription $subscription): self
     {
         $this->subscription = $subscription;
+
+        return $this;
+    }
+
+    public function getFirstname(): ?string
+    {
+        return $this->firstname;
+    }
+
+    public function setFirstname(string $firstname): self
+    {
+        $this->firstname = $firstname;
+
+        return $this;
+    }
+
+    public function getLastname(): ?string
+    {
+        return $this->lastname;
+    }
+
+    public function setLastname(string $lastname): self
+    {
+        $this->lastname = $lastname;
+
+        return $this;
+    }
+
+    public function getStreet(): ?string
+    {
+        return $this->street;
+    }
+
+    public function setStreet(string $street): self
+    {
+        $this->street = $street;
+
+        return $this;
+    }
+
+    public function getZipCode(): ?string
+    {
+        return $this->zipCode;
+    }
+
+    public function setZipCode(string $zipCode): self
+    {
+        $this->zipCode = $zipCode;
+
+        return $this;
+    }
+
+    public function getCity(): ?string
+    {
+        return $this->city;
+    }
+
+    public function setCity(string $city): self
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
+    public function getCountry(): ?string
+    {
+        return $this->country;
+    }
+
+    public function setCountry(string $country): self
+    {
+        $this->country = $country;
 
         return $this;
     }
