@@ -32,8 +32,6 @@ class RegistrationController extends AbstractController
                 )
             );
 
-            $user->setEmail($form->get('email')->getData());
-
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
             $entityManager->flush();
