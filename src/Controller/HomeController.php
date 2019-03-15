@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/", name="app")
+     * @Route("/", name="home")
      */
     public function index(Request $request)
     {        
