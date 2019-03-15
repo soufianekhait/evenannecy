@@ -18,6 +18,8 @@ class RegistrationFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('firstname')
+            ->add('lastname')
             ->add('email', EmailType::class)
             ->add('password', RepeatedType::class, [
                 // instead of being set onto the object directly,
@@ -41,6 +43,10 @@ class RegistrationFormType extends AbstractType
                 'first_options'  => ['label' => 'Password'],
                 'second_options' => ['label' => 'Re-type password'],
             ])
+            ->add('street')
+            ->add('zipCode')
+            ->add('city')
+            ->add('country')
             ->add('Submit', SubmitType::class, [
                 'attr' => ['class' => 'save'],
             ])
