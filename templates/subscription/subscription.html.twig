@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Abonnez-vous !{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{asset('assets/css/style.css')}}"/>
+        <link rel="stylesheet" href="{{asset('assets/css/sign.css')}}"/>
+        <link rel="stylesheet" href="{{asset('assets/css/subscription.css')}}"/>
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+    {{ include('includes/header.html.twig') }}
+    <article id="connexion" class="container-sign">
+
+        <div id="title">
+            <h3>Abonnez-vous</h3>
+            <p>Recevez des offres incroyables avec notre abonnement !</p>
+        </div>
+
+        <div class="subscription-wrapper">
+            <div id="subscription-title">
+                <h3>Choissisez un de nos abonnement</h3>
+            </div>
+            <div id="pass-subscription" class="div-choices-subscription">
+                <ul>
+                    <li><img class="img-subscription" src="{{asset('assets/img/subcard.png')}}"></li>
+                    <li><p><b>Individuelle</b></p></li>
+                    <li><p>Abonnement pour les adultes</p></li>
+                </ul>
+                <ul>
+                    <li><img class="img-subscription" src="{{asset('assets/img/subcard.png')}}"></li>
+                    <li><b>Couple</b></li>
+                    <li><p>Abonnement pour un couple</p></li>
+                </ul>
+                <ul>
+                    <li><img class="img-subscription" src="{{asset('assets/img/subcard.png')}}"></li>
+                    <li><b>Jeune</b></li>
+                    <ul>
+                        <li><p>18 ans et étudiant</p></li>
+                        <li><p>26 ans - Adhésion offerte à partir du 2e enfant</p></li>
+                        <li><p>Demandeur d'emploi</p></li>
+                    </ul>
+                </ul>
+                <ul>
+                    <li><img class="img-subscription" src="{{asset('assets/img/subcard.png')}}"></li>
+                    <li><b>Adhésion parrainée</b></li>
+                    <li><p>Réservée aux détenteurs des cartes Cézam et Loisirs et aux personnes dont l'entreprise est adhérente à L'Audito</p></li>
+                </ul>
+            </div>
+        </div>
+
+        
+
+    </article>
+        {% block javascripts %}
+            <script src="{{asset('assets/scripts/script.js')}}"></script>
+        {% endblock %}
+    {% endblock %}
+</body>
+</html>
