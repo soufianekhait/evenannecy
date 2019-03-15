@@ -1,0 +1,85 @@
+#subscripiton-info{
+    position: relative;
+    width: 70%;
+    height: 70%;
+}
+
+#subscribe-container{
+    height: 50px;
+    width: auto;
+    margin-top: 2.5vh;
+}
+
+.subscription-wrapper{
+    position: relative;
+    width: 70%;
+    background-image: linear-gradient(to top, #F7ECE4 100%, #E6EAF5 0%);
+    margin: auto;
+    top: 30%;
+    height: 85%;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+#subscription-title{
+    text-align: center;
+    position: relative;
+    width: 100%;
+    top: 5%;
+    color: black;
+}
+
+#pass-subscription{width: 100%;}
+#list-services{width: 60%;}
+
+.div-choices-subscription{
+    text-align: center;
+    position: relative;
+    top: 10%;
+    color: #222;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    margin: auto;
+}
+
+.div-choices-subscription ul{
+    display: inline-table;
+    padding: 20px;
+    font-size: 1.1rem;
+}
+
+.img-subscription:hover{
+    background: aqua;
+}
+
+#pass-subscription ul{width: 20%;}
+#list-services ul{width: 48%;}
+
+.div-choices-subscription ul li img{
+    height: auto;
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 120px;
+}
+
+#list-services ul:first-child li img{width: 80px;}
+
+.div-choices-subscription ul li:nth-child(2), .div-choices-subscription ul li:nth-child(2) + li{
+    margin-top: 15px;
+}
+
+#list-services ul li:nth-child(2), #list-services ul li:nth-child(2) + li{
+    color: white;
+}
+
+#services{
+    position: absolute;
+}
+
+#info{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
