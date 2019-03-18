@@ -7,10 +7,10 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
-class AuthController extends AbstractController
+class LoginController extends AbstractController
 {
     /**
-     * @Route("/login", name="login")
+     * @Route("/login", name="app_login")
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
@@ -23,11 +23,7 @@ class AuthController extends AbstractController
     }
 
     /**
-     * @Route("/logged", name="app_logged")
+     * @Route("/logout", name="app_logout")
      */
-    public function logged(): Response
-    {
-        return $this->render('home/home.html.twig');
-    }
-
+    public function logout(AuthenticationUtils $authenticationUtils){}
 }
