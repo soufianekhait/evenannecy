@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\RegistrationFormType;
-use App\Security\AppCustomAuthenticator;
+use App\Security\LoginFormAuthenticator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -17,7 +17,7 @@ class RegistrationController extends AbstractController
     /**
      * @Route("/register", name="register")
      */
-    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder, GuardAuthenticatorHandler $guardHandler, AppCustomAuthenticator $authenticator): Response
+    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder, GuardAuthenticatorHandler $guardHandler, LoginFormAuthenticator $authenticator): Response
     {
         $user = new User();
         $form = $this->createForm(RegistrationFormType::class, $user);
@@ -31,6 +31,8 @@ class RegistrationController extends AbstractController
                     $form->get('password')->getData()
                 )
             );
+
+            $user->setRoles(['ROLE_USER']);
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
