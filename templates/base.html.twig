@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}"/>            
+    {% block stylesheets %}{% endblock %}
+</head>
+
+<body>
+    <header id="navbar-wrapper">
+        <ul id="navbar">
+            <li class="navbarLink"><a href="#subscription">Abonnement</a></li>
+            <li class="navbarLink"><a href="#services">Services</a></li>
+            {% if not is_granted("ROLE_USER") %}
+            <li class="navbarLink"><a href="{{ url('register') }}">S'inscrire</a></li>
+            <li class="navbarLink"><a href="{{ url('app_login') }}">Se connecter</a></li>
+            {% endif %}
+        </ul>
+    </header>
+
+    {% block body %}{% endblock %}
+
+    <script src="{{asset('assets/scripts/script.js')}}"></script>
+    {% block signJS %}{% endblock %}
+</body>
+</html>
