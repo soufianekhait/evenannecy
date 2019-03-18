@@ -1,0 +1,12 @@
+<ul id="navbar">
+    {% if not is_granted("ROLE_USER") %}
+        <li class="navbarLink"><a href="{{ url('register') }}">S'inscrire</a></li>
+        <li class="navbarLink"><a href="{{ url('app_login') }}">Se connecter</a></li>
+    {% else %}
+        <li class="navbarLink"><a href="">Abonnement</a></li>
+        <li class="navbarLink"><a href="">Services</a></li>
+        <li class="navbarLink">Bonjour, {{ user.firstname }}</li>
+        <p><a href="{{ url('app_logout') }}">Déconnexion</a></p>
+    {% endif %}
+</ul>
+{# voter free cookies #}
