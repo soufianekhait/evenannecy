@@ -6,12 +6,13 @@
     overflow: hidden;
     padding: 0;
     position: absolute;
-    width: 1px; }
+    width: 1px; 
+}
   
-  body {
-    font-family: 'Open Sans', sans-serif;
+body {
     color: #1a1a1a;
-    background-color: #f0f0f0; }
+    background-color: #f0f0f0; 
+}
   
   h1,
   h2,
