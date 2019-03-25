@@ -5,7 +5,7 @@
     {% else %}
         <li class="navbarLink"><a href="">Abonnement</a></li>
         <li class="navbarLink"><a href="">Services</a></li>
-        <li class="navbarLink">Bonjour, {{ user.firstname }}</li>
+        <li class="navbarLink"><a href="">Bonjour, {{ user.firstname }}</a></li>
         <p><a href="{{ url('app_logout') }}">Déconnexion</a></p>
     {% endif %}
 </ul>
